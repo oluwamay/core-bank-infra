@@ -1,0 +1,19 @@
+name: CORE-BANK-INFRA
+
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Welcome Message
+        run: echo "Running a Github actions job"
+      
+      - name: List files
+        run: ls
+        
+      - name: Read file
+        run: cat README.md
